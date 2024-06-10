@@ -1,0 +1,256 @@
+{
+  "config": {
+    "configFile": "/Users/kamd/Desktop/Playwright-TS/playwright.config.ts",
+    "rootDir": "/Users/kamd/Desktop/Playwright-TS/tests",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 3
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 15000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "/Users/kamd/Desktop/Playwright-TS/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/Users/kamd/Desktop/Playwright-TS/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/Users/kamd/Desktop/Playwright-TS/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "/Users/kamd/Desktop/Playwright-TS/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/Users/kamd/Desktop/Playwright-TS/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "/Users/kamd/Desktop/Playwright-TS/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "version": "1.44.1",
+    "workers": 4,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "demoPrestashop.spec.ts",
+      "file": "demoPrestashop.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "E-commerce Website Testing",
+          "file": "demoPrestashop.spec.ts",
+          "line": 9,
+          "column": 6,
+          "specs": [
+            {
+              "title": "User Registration and Login",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "status": "timedOut",
+                      "duration": 30027,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                        },
+                        {
+                          "location": {
+                            "file": "/Users/kamd/Desktop/Playwright-TS/pageObjects/RegistrationPage.ts",
+                            "column": 21,
+                            "line": 5
+                          },
+                          "message": "Error: page.fill: Test timeout of 30000ms exceeded.\nCall log:\n  \u001b[2m- waiting for locator('input[name=\"username\"]')\u001b[22m\n\n\n\u001b[90m   at \u001b[39m../pageObjects/RegistrationPage.ts:5\n\n\u001b[0m \u001b[90m 3 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36mclass\u001b[39m \u001b[33mRegistrationPage\u001b[39m \u001b[36mextends\u001b[39m \u001b[33mBasePage\u001b[39m {\n \u001b[90m 4 |\u001b[39m   \u001b[36masync\u001b[39m register(username\u001b[33m:\u001b[39m string\u001b[33m,\u001b[39m email\u001b[33m:\u001b[39m string\u001b[33m,\u001b[39m password\u001b[33m:\u001b[39m string) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 5 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mfill(\u001b[32m'input[name=\"username\"]'\u001b[39m\u001b[33m,\u001b[39m username)\u001b[33m;\u001b[39m\n \u001b[90m   |\u001b[39m                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 6 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mfill(\u001b[32m'input[name=\"email\"]'\u001b[39m\u001b[33m,\u001b[39m email)\u001b[33m;\u001b[39m\n \u001b[90m 7 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mfill(\u001b[32m'input[name=\"password\"]'\u001b[39m\u001b[33m,\u001b[39m password)\u001b[33m;\u001b[39m\n \u001b[90m 8 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mclick(\u001b[32m'button[type=\"submit\"]'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\n\u001b[2m    at RegistrationPage.register (/Users/kamd/Desktop/Playwright-TS/pageObjects/RegistrationPage.ts:5:21)\u001b[22m\n\u001b[2m    at /Users/kamd/Desktop/Playwright-TS/tests/demoPrestashop.spec.ts:18:28\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2024-06-10T18:43:05.208Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "e2fd364054152339b6c3-ea2fb02b234344195368",
+              "file": "demoPrestashop.spec.ts",
+              "line": 10,
+              "column": 7
+            },
+            {
+              "title": "Product Search and Filter",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "status": "timedOut",
+                      "duration": 30032,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                        },
+                        {
+                          "location": {
+                            "file": "/Users/kamd/Desktop/Playwright-TS/pageObjects/HomePage.ts",
+                            "column": 21,
+                            "line": 5
+                          },
+                          "message": "Error: page.fill: Test timeout of 30000ms exceeded.\nCall log:\n  \u001b[2m- waiting for locator('input[name=\"search\"]')\u001b[22m\n\n\n\u001b[90m   at \u001b[39m../pageObjects/HomePage.ts:5\n\n\u001b[0m \u001b[90m 3 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36mclass\u001b[39m \u001b[33mHomePage\u001b[39m \u001b[36mextends\u001b[39m \u001b[33mBasePage\u001b[39m {\n \u001b[90m 4 |\u001b[39m   \u001b[36masync\u001b[39m search(product\u001b[33m:\u001b[39m string) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 5 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mfill(\u001b[32m'input[name=\"search\"]'\u001b[39m\u001b[33m,\u001b[39m product)\u001b[33m;\u001b[39m\n \u001b[90m   |\u001b[39m                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 6 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mclick(\u001b[32m'button[type=\"submit\"]'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 7 |\u001b[39m   }\n \u001b[90m 8 |\u001b[39m }\u001b[0m\n\n\u001b[2m    at HomePage.search (/Users/kamd/Desktop/Playwright-TS/pageObjects/HomePage.ts:5:21)\u001b[22m\n\u001b[2m    at /Users/kamd/Desktop/Playwright-TS/tests/demoPrestashop.spec.ts:38:20\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2024-06-10T18:43:05.211Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "e2fd364054152339b6c3-bbdca97c12cdc9805919",
+              "file": "demoPrestashop.spec.ts",
+              "line": 30,
+              "column": 7
+            },
+            {
+              "title": "Adding Items to Cart",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "status": "timedOut",
+                      "duration": 30042,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                        },
+                        {
+                          "location": {
+                            "file": "/Users/kamd/Desktop/Playwright-TS/pageObjects/HomePage.ts",
+                            "column": 21,
+                            "line": 5
+                          },
+                          "message": "Error: page.fill: Test timeout of 30000ms exceeded.\nCall log:\n  \u001b[2m- waiting for locator('input[name=\"search\"]')\u001b[22m\n\n\n\u001b[90m   at \u001b[39m../pageObjects/HomePage.ts:5\n\n\u001b[0m \u001b[90m 3 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36mclass\u001b[39m \u001b[33mHomePage\u001b[39m \u001b[36mextends\u001b[39m \u001b[33mBasePage\u001b[39m {\n \u001b[90m 4 |\u001b[39m   \u001b[36masync\u001b[39m search(product\u001b[33m:\u001b[39m string) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 5 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mfill(\u001b[32m'input[name=\"search\"]'\u001b[39m\u001b[33m,\u001b[39m product)\u001b[33m;\u001b[39m\n \u001b[90m   |\u001b[39m                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 6 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mclick(\u001b[32m'button[type=\"submit\"]'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 7 |\u001b[39m   }\n \u001b[90m 8 |\u001b[39m }\u001b[0m\n\n\u001b[2m    at HomePage.search (/Users/kamd/Desktop/Playwright-TS/pageObjects/HomePage.ts:5:21)\u001b[22m\n\u001b[2m    at /Users/kamd/Desktop/Playwright-TS/tests/demoPrestashop.spec.ts:59:20\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2024-06-10T18:43:05.210Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "e2fd364054152339b6c3-54f1109b1d3ad32e0386",
+              "file": "demoPrestashop.spec.ts",
+              "line": 49,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2024-06-10T18:43:04.924Z",
+    "duration": 31085.954999999998,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 3,
+    "flaky": 0
+  }
+}
